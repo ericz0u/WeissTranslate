@@ -1,1 +1,5 @@
 # WeissTranslate
+### 6/6/24
+Started training. I chose to do the data in JSON, and gathered some quick data to do an initial proof of concept. As I'm in google colab and not AWS, I immediately ran into some issues with loading packages. For accelerate specifically, I ran into a weird issue where it was up to date but colab didn't think it was. The workaround I found on HF forums was just to run pip install accellerate, then restart the instance then not run any other pip install commands. Next, the instance was running out of RAM and crashing while I was executing. I solved this by decreasing the batch size from 16 to 8, and switching instances from default to L4(I would've preferred A100, but they were not available)
+### 6/5/24
+Exploring models to retrain. There weren't many specific Japanese to English models on huggingface, so I settled on using "facebook/mbart-large-50-many-to-many-mmt", which seems to be pretty popular. It uses 50 languages, so I will just take the tokenizer for Japanese and do the fine tuning on that
