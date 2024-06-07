@@ -1,4 +1,4 @@
-# Fine-tuned BERT-based model to accurately translate Weiss Schwarz cards. 
+# BERT-based model to accurately translate Weiss Schwarz cards. 
 ### Model on HuggingFace here: https://huggingface.co/EricZ0u/WeissTranslate
 
 Weiss Schwarz is a trading card game by Japanese company Bushiroad. It plays cards out of a 50-card deck where each card will have a number of lengthy, specifically-worded effects. This makes the game known for being very beginner-unfriendly, sometimes referred to as a "paragraph reading simulator". This is made worse by the fact that many sets in the game are exclusively printed in the Japanese language, so the choices are to either print out a thick stack of translations, memorize every card, or fumble with google translate(Makes wording very weird and confusing, especially for new players). I'm aiming to build a bert-based model that can accurately translate Japanese cards so the wording is the same as their english counterparts. I plan to add a function to tag card effects to make them easier to search, and hopefully integrate this all into an app to image translate cards instantly. 
