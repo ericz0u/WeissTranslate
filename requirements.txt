@@ -1,5 +1,0 @@
-Flask
-google-cloud-vision
-pillow
-transformers
-torch
