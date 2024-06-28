@@ -1,7 +1,8 @@
 # BERT-based model to accurately translate Weiss Schwarz cards. 
 ### Model on HuggingFace here: https://huggingface.co/EricZ0u/WeissTranslate
 
-Weiss Schwarz is a trading card game by Japanese company Bushiroad. It plays cards out of a 50-card deck where each card will have a number of lengthy, specifically-worded effects. This makes the game known for being very beginner-unfriendly, sometimes referred to as a "paragraph reading simulator". This is made worse by the fact that many sets in the game are exclusively printed in the Japanese language, so the choices are to either print out a thick stack of translations, memorize every card, or fumble with google translate(Makes wording very weird and confusing, especially for new players). I'm aiming to build a bert-based model that can accurately translate Japanese cards so the wording is the same as their english counterparts. I plan to add a function to tag card effects to make them easier to search, and hopefully integrate this all into an app to image translate cards instantly. 
+Weiss is a paragraph reading simulator and I can't read japanese fast enough, and google translate has no idea what weiss cards say so fine-tuned a BERT model to translate! Based on 
+facebook/mbart-large-50-many-to-many-mmt and fine-tuned using data scraped from HeartOfTheCards. 
 ![Comparison lol](https://github.com/ericz0u/WeissTranslate/blob/main/lol.png?raw=true)
 ### 6/24/2024
 Incrementally training the model by storing it on huggingface then pulling it the next time. At this point I'm limited by the ddos protection of heartofthecards in getting training data lol. The accuracy is very good, I'd say usable. The only problem is sometimes in specific contexts some effects get cut off? like if a card is a counter but also has another effect below the counter effect(pretty rare) it cuts off the second effect in the translation.
